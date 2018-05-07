@@ -1,0 +1,40 @@
+{
+    "departments": [
+        {
+            "name": "Cortés",
+            "description": " The department covers a total surface area of 3,954 km² and, in 2015, had an estimated population of 1,612,762 people, making it the most populous department in Honduras. The Merendón Mountains rise in western Cortés, but the department is mostly a tropical lowland, the Sula Valley, crossed by the Ulúa and Chamelecon rivers.",
+            "imageURL": "img/HN-CR.svg",
+            "imageAttribution": "By TUBS [CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)], from Wikimedia Commons"
+        },
+        {
+            "name": "Copán",
+            "description": "The departmental capital is the town of Santa Rosa de Copán. The department is well known for its tobacco and fine cigars. The department is famous for its Pre-Columbian archaeological site at Copán, one of the greatest cities of the Maya civilization. The department of Copán covers a total surface area of 3,242 km2 and, in 2015, had an estimated population of about 382,722 people.",
+            "imageURL": "img/HN-CP.svg",
+            "imageAttribution": "By TUBS [CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)], from Wikimedia Commons"
+        },
+        {
+            "name": "Santa Bárbara",
+            "description": "The departmental capital is Santa Bárbara. The department covers a total surface area of 5,115 km² and, in 2005, had an estimated population of 368,298 people. The department, historically, is known for harvesting mahogany and cedar trees for exportation.",
+            "imageURL": "img/HN-SB.svg",
+            "imageAttribution": "By TUBS [CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)], from Wikimedia Commons"
+        },
+        {
+            "name": "Yoro",
+            "description": "The department contains rich agricultural lands, concentrated mainly on the valley of the Aguan River and the Sula Valley, on opposite ends. The departmental capital is Yoro. The department covers a total surface area of 7,939 km² and, in 2005, had an estimated population of 503,886 people. It is famous for the Lluvia de Peces (rain of fishes), a tradition by which fish fall from the sky during very heavy rains.",
+            "imageURL": "img/HN-YO.svg",
+            "imageAttribution": "By TUBS [CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)], from Wikimedia Commons"
+        },
+        {
+            "name": "Ocotepeque",
+            "description": "Located in the West and bordering both El Salvador and Guatemala. It was formed in 1906 from part of Copán department. The capital and main city is Ocotepeque. The department covers a total surface area of 1,630 km² and, in 2015, had an estimated population of 151,516.",
+            "imageURL": "img/HN-OC.svg",
+            "imageAttribution": "By TUBS [CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)], from Wikimedia Commons"
+        },
+        {
+            "name": "Francisco Morazán",
+            "description": "It is located in the central part of the nation. The departmental capital is Tegucigalpa, which is also Honduras's national capital. Until 1943 it was known as Tegucigalpa department. It was named after national hero Francisco Morazán. The department is very mountainous, with rugged ranges covered in pine forests; which are rocky and mostly clay. Valleys, like those of Guiamaca, Talanga, and Amarateca, are interspersed among the ranges. Many of the high mountain peaks house cloud forests, like La Tigra National park or Cerro Uyuca. The extreme southeastern portion of the department has a Pacific dry forest environment, while the northern portion contains the Montaña de la Flor, home to the Jicaque people. Francisco Morazán department covers a total surface area of 7,946 km2 (3,068 sq mi) and, in 2005, had an estimated population of 1,680,700 people. The coat-of-arms and department flag of Francisco Morazán Department are the same as its capital, Tegucigalpa.",
+            "imageURL": "img/HN-FM.svg",
+            "imageAttribution": "By TUBS [CC BY 2.0 (https://creativecommons.org/licenses/by/2.0)], from Wikimedia Commons"
+        }
+    ]
+}
