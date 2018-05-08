@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
+import CountryMap from './components/CountryMap';
 
-const App = () => <div>Hello, world! How is it going?</div>;
+const App = () => <CountryMap />;
 
-render(<App/>, document.getElementById('app'));
+render(<App />, document.getElementById('app'));

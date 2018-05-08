@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "A simple website that displays information about the departments of Honduras.",
   "main": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/astrothing/honduras-departments-website.git"
@@ -17,7 +19,8 @@
   "homepage": "https://github.com/astrothing/honduras-departments-website#readme",
   "dependencies": {
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "react-simple-maps": "^0.12.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
