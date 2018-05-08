@@ -20,7 +20,7 @@ const CountryMap = () => (
         {(geographies, projection) =>
           geographies.map((geography, i) => (
             <Geography
-              key={i} /* eslint-disable-line */
+              key={i}
               geography={geography}
               projection={projection}
               style={{
