@@ -20,6 +20,7 @@
     "node": true
   },
   "rules": {
-    "react/no-array-index-key": "off"
+    "react/no-array-index-key": "off",
+    "react/prop-types": "off"
   }
 }
