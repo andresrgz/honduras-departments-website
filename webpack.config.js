@@ -13,7 +13,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json', '.css']
   },
   stats: {
     colors: true,
@@ -21,18 +21,20 @@ module.exports = {
     chunks: false
   },
   devServer: {
-      contentBase: path.join(__dirname, dist),
-      open: true
+    contentBase: path.join(__dirname, dist),
+    open: true
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
       }
     ]
   },
-  plugins: [
-      new HtmlPlugin({ template: path.join(__dirname, 'src/index.html') })
-  ]
+  plugins: [new HtmlPlugin({ template: path.join(__dirname, 'src/index.html') })]
 };
