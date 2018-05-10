@@ -15,11 +15,11 @@ class App extends Component {
     };
   }
 
-  selectDepartment(departmentId) {
-    if (this.state.departments[departmentId] === undefined) {
-      throw new Error(`Department '${departmentId}' not found`);
+  selectDepartment(selectedDepartmentId) {
+    if (this.state.departments[selectedDepartmentId] === undefined) {
+      throw new Error(`Department '${selectedDepartmentId}' not found`);
     }
-    this.setState({ selectedDepartmentId: departmentId });
+    this.setState({ selectedDepartmentId });
   }
 
   render() {

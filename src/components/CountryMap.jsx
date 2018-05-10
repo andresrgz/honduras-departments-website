@@ -2,29 +2,22 @@ import React, { Component } from 'react';
 import { ComposableMap, ZoomableGroup, Geographies, Geography } from 'react-simple-maps';
 import map from '../maps/HND.json';
 
-const scalingFactor = 10000;
+const scale = 10000;
 const countryLatitude = 14.7;
 const countryLongitude = -86.3;
 const mapWidthRatio = 0.12;
 const mapHeightRatio = 0.075;
 
 class CountryMap extends Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(geography) {
-    this.props.selectDepartment(geography.properties.HASC_1);
-  }
+  handleClick = geography => this.props.selectDepartment(geography.properties.HASC_1);
 
   render() {
     return (
       <ComposableMap
         projection="mercator"
-        projectionConfig={{ scale: scalingFactor }}
-        width={mapWidthRatio * scalingFactor}
-        height={mapHeightRatio * scalingFactor}
+        projectionConfig={{ scale }}
+        width={mapWidthRatio * scale}
+        height={mapHeightRatio * scale}
       >
         <ZoomableGroup center={[countryLongitude, countryLatitude]} disablePanning>
           <Geographies geography={map}>
