@@ -3,57 +3,61 @@ import { ComposableMap, ZoomableGroup, Geographies, Geography } from 'react-simp
 import map from '../maps/HND.json';
 
 const scale = 10000;
-const countryLatitude = 14.7;
-const countryLongitude = -86.3;
 const mapWidthRatio = 0.12;
 const mapHeightRatio = 0.075;
+const countryCoordinates = [-86.3, 14.7];
 
 class CountryMap extends Component {
   handleClick = geography => this.props.selectDepartment(geography.properties.HASC_1);
 
   render() {
+    const width = mapWidthRatio * scale;
+    const height = mapHeightRatio * scale;
     return (
-      <ComposableMap
-        projection="mercator"
-        projectionConfig={{ scale }}
-        width={mapWidthRatio * scale}
-        height={mapHeightRatio * scale}
-      >
-        <ZoomableGroup center={[countryLongitude, countryLatitude]} disablePanning>
-          <Geographies geography={map}>
-            {(geographies, projection) =>
-              geographies.map(geography => (
-                <Geography
-                  key={geography.properties.HASC_1}
-                  geography={geography}
-                  projection={projection}
-                  onClick={this.handleClick}
-                  style={{
-                    default: {
-                      fill: '#ECEFF1',
-                      stroke: '#607D8B',
-                      strokeWidth: 0.75,
-                      outline: 'none'
-                    },
-                    hover: {
-                      fill: '#607D8B',
-                      stroke: '#607D8B',
-                      strokeWidth: 0.75,
-                      outline: 'none'
-                    },
-                    pressed: {
-                      fill: '#FF5722',
-                      stroke: '#607D8B',
-                      strokeWidth: 0.75,
-                      outline: 'none'
-                    }
-                  }}
-                />
-              ))
-            }
-          </Geographies>
-        </ZoomableGroup>
-      </ComposableMap>
+      <div className="container-country-map">
+        <ComposableMap
+          projection="mercator"
+          projectionConfig={{ scale }}
+          width={width}
+          height={height}
+          aspectRatio="xMinYMin meet"
+        >
+          <ZoomableGroup center={countryCoordinates} disablePanning>
+            <Geographies geography={map}>
+              {(geographies, projection) =>
+                geographies.map(geography => (
+                  <Geography
+                    key={geography.properties.HASC_1}
+                    geography={geography}
+                    projection={projection}
+                    onClick={this.handleClick}
+                    style={{
+                      default: {
+                        fill: '#ECEFF1',
+                        stroke: '#607D8B',
+                        strokeWidth: 0.75,
+                        outline: 'none'
+                      },
+                      hover: {
+                        fill: '#607D8B',
+                        stroke: '#607D8B',
+                        strokeWidth: 0.75,
+                        outline: 'none'
+                      },
+                      pressed: {
+                        fill: '#FF5722',
+                        stroke: '#607D8B',
+                        strokeWidth: 0.75,
+                        outline: 'none'
+                      }
+                    }}
+                  />
+                ))
+              }
+            </Geographies>
+          </ZoomableGroup>
+        </ComposableMap>
+      </div>
     );
   }
 }

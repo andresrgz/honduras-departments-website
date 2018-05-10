@@ -24,7 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container-app">
         <CountryMap selectDepartment={this.selectDepartment} />
         <DepartmentPanel department={this.state.departments[this.state.selectedDepartmentId]} />
       </div>
