@@ -9,23 +9,23 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      departments,
-      selectedDepartmentId: defaultDepartmentId
+      selectedDepartment: departments[defaultDepartmentId]
     };
   }
 
   selectDepartment = selectedDepartmentId => {
-    if (this.state.departments[selectedDepartmentId] === undefined) {
+    const selectedDepartment = departments[selectedDepartmentId];
+    if (selectedDepartment === undefined) {
       throw new Error(`Department '${selectedDepartmentId}' not found`);
     }
-    this.setState({ selectedDepartmentId });
+    this.setState({ selectedDepartment });
   };
 
   render() {
     return (
       <div className="container-app">
         <CountryMap selectDepartment={this.selectDepartment} />
-        <DepartmentPanel department={this.state.departments[this.state.selectedDepartmentId]} />
+        <DepartmentPanel department={this.state.selectedDepartment} />
       </div>
     );
   }
