@@ -18,6 +18,10 @@ body {
     min-height: 100vh;
 }
 
+.container-country-map h1.container-country-map-name {
+    text-align: center;
+}
+
 .container-country-map svg.rsm-svg {
   display: block;
   width: 100%;

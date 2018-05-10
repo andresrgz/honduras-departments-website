@@ -15,6 +15,7 @@ class CountryMap extends Component {
     const height = mapHeightRatio * scale;
     return (
       <div className="container-country-map">
+        <h1 className="container-country-map-name">Honduras</h1>
         <ComposableMap
           projection="mercator"
           projectionConfig={{ scale }}
