@@ -8,7 +8,7 @@ const mapHeightRatio = 0.075;
 const countryCoordinates = [-86.3, 14.7];
 
 class CountryMap extends Component {
-  handleClick = geography => this.props.selectDepartment(geography.properties.HASC_1);
+  handleClick = departmentId => this.props.selectDepartment(departmentId);
 
   render() {
     const width = mapWidthRatio * scale;
@@ -24,36 +24,39 @@ class CountryMap extends Component {
           aspectRatio="xMinYMin meet"
         >
           <ZoomableGroup center={countryCoordinates} disablePanning>
-            <Geographies geography={map}>
+            <Geographies geography={map} disableOptimization>
               {(geographies, projection) =>
-                geographies.map(geography => (
-                  <Geography
-                    key={geography.properties.HASC_1}
-                    geography={geography}
-                    projection={projection}
-                    onClick={this.handleClick}
-                    style={{
-                      default: {
-                        fill: '#ECEFF1',
-                        stroke: '#607D8B',
-                        strokeWidth: 0.75,
-                        outline: 'none'
-                      },
-                      hover: {
-                        fill: '#607D8B',
-                        stroke: '#607D8B',
-                        strokeWidth: 0.75,
-                        outline: 'none'
-                      },
-                      pressed: {
-                        fill: '#FF5722',
-                        stroke: '#607D8B',
-                        strokeWidth: 0.75,
-                        outline: 'none'
-                      }
-                    }}
-                  />
-                ))
+                geographies.map(geography => {
+                  const departmentId = geography.properties.HASC_1;
+                  return (
+                    <Geography
+                      key={departmentId}
+                      geography={geography}
+                      projection={projection}
+                      onClick={() => this.handleClick(departmentId)}
+                      style={{
+                        default: {
+                          fill: this.props.selectedDepartmentId === departmentId ? '#FF5722' : '#ECEFF1',
+                          stroke: '#607D8B',
+                          strokeWidth: 0.75,
+                          outline: 'none'
+                        },
+                        hover: {
+                          fill: this.props.selectedDepartmentId === departmentId ? '#FF5722' : '#607D8B',
+                          stroke: '#607D8B',
+                          strokeWidth: 0.75,
+                          outline: 'none'
+                        },
+                        pressed: {
+                          fill: '#FF5722',
+                          stroke: '#607D8B',
+                          strokeWidth: 0.75,
+                          outline: 'none'
+                        }
+                      }}
+                    />
+                  );
+                })
               }
             </Geographies>
           </ZoomableGroup>
