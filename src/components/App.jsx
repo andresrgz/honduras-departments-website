@@ -8,19 +8,18 @@ const defaultDepartmentId = 'HN.FM';
 class App extends Component {
   constructor() {
     super();
-    this.selectDepartment = this.selectDepartment.bind(this);
     this.state = {
       departments,
       selectedDepartmentId: defaultDepartmentId
     };
   }
 
-  selectDepartment(selectedDepartmentId) {
+  selectDepartment = selectedDepartmentId => {
     if (this.state.departments[selectedDepartmentId] === undefined) {
       throw new Error(`Department '${selectedDepartmentId}' not found`);
     }
     this.setState({ selectedDepartmentId });
-  }
+  };
 
   render() {
     return (
