@@ -5,7 +5,7 @@ const dist = 'dist';
 
 module.exports = {
   context: __dirname,
-  entry: './src/',
+  entry: './src/index.jsx',
   devtool: 'source-map',
   mode: 'development',
   output: {
@@ -36,5 +36,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlPlugin({ template: path.join(__dirname, 'src/index.html') })]
+  plugins: [new HtmlPlugin({ template: path.join(__dirname, 'dist/index.html') })]
 };
