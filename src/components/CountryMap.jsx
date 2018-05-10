@@ -29,9 +29,9 @@ class CountryMap extends Component {
         <ZoomableGroup center={[countryLongitude, countryLatitude]} disablePanning>
           <Geographies geography={map}>
             {(geographies, projection) =>
-              geographies.map((geography, i) => (
+              geographies.map(geography => (
                 <Geography
-                  key={i}
+                  key={geography.properties.HASC_1}
                   geography={geography}
                   projection={projection}
                   onClick={this.handleClick}
