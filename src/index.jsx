@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import App from './components/App';
+import './index.css';
 
-const App = () => <div>Hello, world! How is it going?</div>;
-
-render(<App/>, document.getElementById('app'));
+render(<App />, document.getElementById('app'));
