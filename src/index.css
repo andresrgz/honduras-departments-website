@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Anaheim');
 
 body {
     overflow-y: visible;
@@ -16,10 +16,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Anaheim', sans-serif;
+    color: #212121;
 }
 
 .container-country-map h1.container-country-map-name {
     text-align: center;
+    font-size: 3em;
 }
 
 .container-country-map svg.rsm-svg {
@@ -28,22 +31,34 @@ body {
   height: 100%;
 }
 
+.container-department-panel {
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    padding: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 .container-department-panel h1.container-department-panel-title {
     text-align: center;
 }
 
 .container-department-panel img.container-department-panel-img {
     display: block;
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     margin: auto;
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    padding: 5px;
 }
 
 .container-department-panel p.container-department-panel-text {
     text-align: justify;
+    font-size: 1em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1366px) {
     body {
         overflow-y: hidden;
     }
@@ -54,5 +69,9 @@ body {
         grid-template-rows: auto;
         grid-template-areas: "map department-panel";
         align-items: center;
+    }
+
+    .container-department-panel img.container-department-panel-img {
+        max-width: 40%;
     }
 }
